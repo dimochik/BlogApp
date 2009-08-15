@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   # GET /articles.xml
   def index
     @articles = Article.all
-
+    @categories = Category.find(:all)
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
