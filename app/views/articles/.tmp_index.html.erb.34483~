@@ -1,0 +1,32 @@
+<h3>List of posts:</h3>
+
+<div id='side'>
+	<h3>Categories</h3>
+	<% @categories.each do |category| %>
+		<p><%= link_to category.name, category_path(category.id) %><%=  %></p>
+  <% end %>
+</div>
+
+<div id = 'posts'>
+	<table>
+	  <tr>
+	    <th>Title</th>
+	    <th>Author</th>
+			<th>Created on </th>
+	  </tr>
+	
+	<% @articles.each do |article| %>
+	  <tr>
+	    <td><%=h article.title %></td>
+	    <td><%=h article.author %></td>
+			<td><%=h human_date(article.created_at) %></td>
+	    <td><%= link_to 'Show', article %></td>
+	    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+	    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+</div>
+<%= link_to 'Add a post', new_article_path %>
+<br />
+
