@@ -10,7 +10,7 @@
 	<body id="blog">
 		<div id="banner">
 			<%= image_tag("rails.png") %>
-			<%= @page_title || "Dima's blog" %>
+			<%= @page_title || "....." %>
 		</div>
 		<div id="body">
 			<%= yield %>
