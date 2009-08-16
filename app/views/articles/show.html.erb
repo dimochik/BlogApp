@@ -13,7 +13,7 @@
   <%=h @article.author %>
 </p>
 
-<br>
+<%= link_to 'Go back to list of all articles', articles_path %>
 <hr>
 
 <% @article.comments.each do |comment| %>

@@ -1568,3 +1568,584 @@ Rendering template within layouts/articles
 Rendering articles/show
   [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-08-16 15:06:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 171ms (View: 156, DB: 0) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:06:27) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 79ms (View: 32, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-08-16 15:06:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-08-16 15:06:42) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-08-16 15:06:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/categories/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:06:44) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-08-16 15:06:56) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Rendered articles/_form (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:07:09) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-08-16 15:07:14) [DELETE]
+  Parameters: {"authenticity_token"=>"FwpJLpjerWEDXUfmDRHFW+VnYo1g2jEjnj+yhxyITB4=", "id"=>"1"}
+  [4;36;1mArticle Load (16.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Destroy (31.0ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articles
+Completed in 125ms (DB: 47) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:07:14) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 156ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-08-16 15:07:16) [DELETE]
+  Parameters: {"authenticity_token"=>"FwpJLpjerWEDXUfmDRHFW+VnYo1g2jEjnj+yhxyITB4=", "id"=>"2"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Destroy (0.0ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/articles
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/articles/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:07:16) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+Migrating to CreateUsers (20090812230228)
+Migrating to CreateCategories (20090812230408)
+Migrating to CreateComments (20090816210027)
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090816220840')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+Migrating to CreateUsers (20090812230228)
+Migrating to CreateCategories (20090812230408)
+Migrating to CreateComments (20090816210027)
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+Migrating to CreateUsers (20090812230228)
+Migrating to CreateCategories (20090812230408)
+Migrating to CreateComments (20090816210027)
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+Migrating to CreateUsers (20090812230228)
+Migrating to CreateCategories (20090812230408)
+Migrating to CreateComments (20090816210027)
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (110.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (62.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090812200841')[0m
+Migrating to CreateUsers (20090812230228)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nic" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090812230228')[0m
+Migrating to CreateCategories (20090812230408)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090812230408')[0m
+Migrating to CreateComments (20090816210027)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "article_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090816210027')[0m
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: article: ALTER TABLE "article" ADD "category_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+Migrating to CreateUsers (20090812230228)
+Migrating to CreateCategories (20090812230408)
+Migrating to CreateComments (20090816210027)
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: article: ALTER TABLE "article" ADD "category_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090812200841')[0m
+Migrating to CreateUsers (20090812230228)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nic" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090812230228')[0m
+Migrating to CreateCategories (20090812230408)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090812230408')[0m
+Migrating to CreateComments (20090816210027)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "article_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090816210027')[0m
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mALTER TABLE "articles" ADD "category_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090816220840')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090812200841)
+Migrating to CreateUsers (20090812230228)
+Migrating to CreateCategories (20090812230408)
+Migrating to CreateComments (20090816210027)
+Migrating to AddingCategoryIdToArticle (20090816220840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (15.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:16:52) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:16:53) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-08-16 15:17:01) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2009-08-16 15:17:03) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2009-08-16 15:17:07) [POST]
+  Parameters: {"category"=>{"name"=>"Ruby"}, "commit"=>"Create", "authenticity_token"=>"FwpJLpjerWEDXUfmDRHFW+VnYo1g2jEjnj+yhxyITB4="}
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("name", "updated_at", "created_at") VALUES('Ruby', '2009-08-16 22:17:07', '2009-08-16 22:17:07')[0m
+Redirected to http://localhost:3000/categories/1
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-08-16 15:17:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-08-16 15:17:09) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2009-08-16 15:17:11) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2009-08-16 15:17:14) [POST]
+  Parameters: {"category"=>{"name"=>"Other"}, "commit"=>"Create", "authenticity_token"=>"FwpJLpjerWEDXUfmDRHFW+VnYo1g2jEjnj+yhxyITB4="}
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("name", "updated_at", "created_at") VALUES('Other', '2009-08-16 22:17:14', '2009-08-16 22:17:14')[0m
+Redirected to http://localhost:3000/categories/2
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-08-16 15:17:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/categories/2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-08-16 15:17:16) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:17:26) [GET]
+  [4;35;1mArticle Load (16.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-08-16 15:17:30) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Rendered articles/_form (0.0ms)
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-08-16 15:17:40) [POST]
+  Parameters: {"article"=>{"body"=>"sdfdsf", "title"=>"dsf", "author"=>"sdfsdf"}, "commit"=>"Create", "authenticity_token"=>"FwpJLpjerWEDXUfmDRHFW+VnYo1g2jEjnj+yhxyITB4="}
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "body", "author", "category_id", "created_at") VALUES('2009-08-16 22:17:40', 'dsf', 'sdfdsf', 'sdfsdf', NULL, '2009-08-16 22:17:40')[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-08-16 15:17:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-08-16 15:17:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"FwpJLpjerWEDXUfmDRHFW+VnYo1g2jEjnj+yhxyITB4=", "comment"=>{"body"=>"sdfdsf", "article_id"=>"1"}}
+  [4;36;1mComment Create (0.0ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "body", "article_id", "created_at") VALUES('2009-08-16 22:17:46', 'sdfdsf', 1, '2009-08-16 22:17:46')[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Redirected to http://localhost:3000/articles/1
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/comments]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-08-16 15:17:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 172ms (View: 32, DB: 0) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:17:48) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-08-16 15:18:08) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Rendered articles/_form (0.0ms)
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-08-16 15:19:38) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Rendered articles/_form (16.0ms)
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-08-16 15:30:53) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (wrong number of arguments (3 for 4)) on line #15 of app/views/articles/_form.html.erb:
+12:   </p>
+13:     <p>
+14:     <%= f.label :category %><br />
+15:     <%= f.collection_select(:article, :article_id, @categories) %>
+16:   </p>
+17:   <p>
+18:     <%= f.submit label_text %>
+
+    app/views/articles/_form.html.erb:15:in `collection_select'
+    app/views/articles/_form.html.erb:15
+    app/views/articles/new.html.erb:5
+    app/views/articles/new.html.erb:3
+    app/controllers/articles_controller.rb:29:in `new'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-08-16 15:35:37) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (undefined method `article' for #<Article:0x4715120>) on line #15 of app/views/articles/_form.html.erb:
+12:   </p>
+13:     <p>
+14:     <%= f.label :category %><br />
+15:     <%= f.collection_select(:article, :article_id, @categories, :id) %>
+16:   </p>
+17:   <p>
+18:     <%= f.submit label_text %>
+
+    app/views/articles/_form.html.erb:15
+    app/views/articles/new.html.erb:5
+    app/views/articles/new.html.erb:3
+    app/controllers/articles_controller.rb:29:in `new'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-08-16 15:35:39) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (undefined method `article' for #<Article:0x4878364>) on line #15 of app/views/articles/_form.html.erb:
+12:   </p>
+13:     <p>
+14:     <%= f.label :category %><br />
+15:     <%= f.collection_select(:article, :article_id, @categories, :id) %>
+16:   </p>
+17:   <p>
+18:     <%= f.submit label_text %>
+
+    app/views/articles/_form.html.erb:15
+    app/views/articles/new.html.erb:5
+    app/views/articles/new.html.erb:3
+    app/controllers/articles_controller.rb:29:in `new'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-08-16 15:36:33) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-08-16 15:36:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+
+NameError (uninitialized constant ArticlesController::Categories):
+  app/controllers/articles_controller.rb:17:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)

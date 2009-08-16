@@ -10,7 +10,10 @@
     <%= f.label :author %><br />
     <%= f.text_field :author %>
   </p>
-    
+    <p>
+    <%= f.label :category %><br />
+    <%= f.collection_select(:article, :article_id, @categories) %>
+  </p>
   <p>
     <%= f.submit label_text %>
 </p>

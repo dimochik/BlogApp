@@ -6,6 +6,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.resources :articles
+  
+  
+  # this will create a path so that articles will know of commnets:
+  #POST /articles/97/comments
+  map.resources :articles, :has_many => :commnets
 
   # The priority is based upon order of creation: first created -> highest priority.
 
